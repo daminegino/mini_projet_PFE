@@ -1,0 +1,23 @@
+
+<div class="list-group">
+    <div class="list-group-item list-group-item-success">
+      Liste des PFEs
+    </div>
+</div>
+<div class="table-responsive">
+    <table class="table table-striped" style="padding: 10px !important;">
+        <tr class="" style="background-color: gray !important;">
+            <td>ID</td>
+            <td>Titre</td>
+            <td>Type</td>
+            <td>action</td>
+        </tr>
+        <tr *ngFor= "let p of pfes" class="" >
+            <td class="">{{p.id}}</td>
+            <td class="">{{p.titre}}</td>
+            <td class="">{{p.type_pfe.nom}}</td>
+            <td class=""><button class="btn btn-danger" (click)="delPFE(p.id)">DELETE</button></td>
+        </tr>
+    </table>
+</div>    
+

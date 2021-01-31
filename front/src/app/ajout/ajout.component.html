@@ -1,0 +1,16 @@
+<div class="list-group">
+    <div class="list-group-item list-group-item-success">
+      Add PFE
+    </div>
+    <div>
+        Titre PFE:<br>
+        <input class="form-control" type="text" [(ngModel)]="pfe.titre"/>
+        Type PFE:<br>
+        <select id="Selected" class="form-control" name="type" [(ngModel)]="pfe.type_pfe">
+           
+            <option *ngFor="let p of pfetypes "  [ngValue]="p" >{{p.nom}}</option>
+          
+        </select>
+        <input type="submit" class="btn btn-primary" (click)="addPFE()" value="Ajouter un PFE">
+    </div>
+</div>
